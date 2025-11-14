@@ -1,0 +1,17 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.fondo {
+    background-image: url('imagenes/girona.jpg');
+}
+
+.titulorelativo {
+    top: 90%;
+}
+
+.scrolled {
+    background-color: rgb(224, 0, 105) !important;
+    transition: background-color 0.3s ease;
+}
