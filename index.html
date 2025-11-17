@@ -4,72 +4,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNAHotelSolutions</title>
-    <link rel="stylesheet" href="style.css">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="relative">
-    <div class="relative h-screen w-full bg-cover fondo">
-        
-        <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div> 
+<body>
+
+    <div class="relative h-screen w-full bg-cover bg-center fondo">
+
+        <!-- Oscurecer imagen -->
+        <div class="absolute inset-0 bg-black/40"></div>
 
         <!-- Navegación -->
         <header class="fixed top-0 left-0 w-full z-20 transition-all duration-300" id="menu">
-            <nav class="flex items-center justify-between p-5 px-10">
+            <nav class="flex items-center justify-between p-6 px-12">
                 <img src="imagenes/logonav.png" alt="Logo" class="h-16" id="logo">
 
                 <ul class="flex space-x-8">
-                    <li><a href="#" class="text-white text-xl font-semibold">Hotel</a></li>
-                    <li><a href="#" class="text-white text-xl font-semibold">Ofertas</a></li>
+                    <li><a href="#" class="text-white text-lg font-semibold">Hotel</a></li>
+                    <li><a href="#" class="text-white text-lg font-semibold">Ofertas</a></li>
                     <li>
-                        <a href="#" class="text-white text-xl font-semibold border border-white px-6 py-2 rounded-full">
+                        <a href="#" class="text-white text-lg font-semibold border border-white px-6 py-2 rounded-full">
                             Reservar
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
-        
-        <!-- Título centrado -->
-        <h1 class="relative text-center text-white font-bold text-8xl -translate-y-1/2 titulorelativo">
+       <h1 class="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 
+           text-white font-bold text-center 
+           text-4xl md:text-6xl lg:text-7xl tracking-wide">
             GNA HOTEL SOLUTIONS
         </h1>
     </div>
 
-    <main class="p-10">
-        <h3>GNA Hotel Solutions: l'èxit online del teu hotel</h3>
-        <p>Lorem ipsum dolor sit amet... </p>
-        <p>Pellentesque hendrerit sit amet mauris...</p>
-    </main>
 
-<footer class="w-full bg-[#f3d6db] py-12 px-0">
-    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-10 px-16">
-        
-        <div>
-            <img src="imagenes/logonavfooter.png" alt="logo" class="h-16 mb-4">
-        </div>
+    <section class="max-w-full mx-auto">
 
-        <div class="text-black space-y-3">
-            <p>Contacte</p>
-            <p>Newsletter</p>
-            <p>Treballa amb nosaltres</p>
-        </div>
+        <h2 class="text-5xl font-normal text-center section_h2">
+            GNA Hotel Solutions:<br>
+            <span class="section_h2_span">l’èxit online del teu hotel</span>
+        </h2>
 
-        <div class="text-black space-y-3">
-            <p>Política de cookies</p>
-            <p>Política de privacitat</p>
-            <p>Avís legal</p>
+        <div class="margendivp">
+            <p class="text-justify margendivp_p">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus,
+            velit id viverra fermentum, mauris odio maximus augue, ac pretium diam nunc non lacus.
+            Suspendisse mattis pellentesque velit, a vestibulum felis condimentum et. Aenean dapibus
+            ante vitae dolor egestas aliquam. Ut maximus feugiat laoreet. Vestibulum maximus, neque
+            vitae mattis facilisis, nisi turpis sollicitudin orci, at mollis urna mi sit amet nulla.
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ornare pellentesque
+            est tristique placerat. Suspendisse velit elit, commodo sit amet libero at, mollis placerat
+            massa. Nunc elementum vulputate mauris vitae congue. Nunc vitae mi ligula. Etiam viverra
+            viverra ante, vel dictum nisl condimentum vitae.
+            <br>
+            <br>
+            Pellentesque hendrerit sit amet mauris vel dapibus. In felis diam, ornare vel iaculis et,
+            egestas sit amet dolor. Nulla nec cursus dui. Nulla vulputate dolor et nunc feugiat tempus.
+            Nullam bibendum et dolor quis ornare. Nam ac ante ac felis molestie dictum et et risus.
+            Quisque sagittis dignissim accumsan. Aliquam mattis volutpat condimentum. Interdum et
+            malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus
+            orci luctus et ultrices posuere cubilia curae; Integer vel sem dolor. Fusce et massa feugiat,
+            lacinia est sit amet, consectetur orci.
+        </p>
         </div>
+    </section>
+
+  <section class="max-w-full bg-[#F1D0D6] my-15 p-4 flex flex-col md:flex-row items-center md:space-x-8 seccionfiltro">
+    <h2 class="font-normal text-lg seccionfiltro_h2 pl-4 md:pl-12 mb-4 md:mb-0">Filtrar per</h2> 
+    <select class="select-custom border rounded-full p-4 w-full md:w-1/6 bg-white">
+        <option value="">Seleccionar</option>
+        <option value="opcion1">Opción 1</option>
+        <option value="opcion2">Opción 2</option>
+        <option value="opcion3">Opción 3</option>
+    </select>
+</section>
+
+<section class="max-w-7xl mx-auto mb-32 px-4">
+  <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+
+    <div class="w-full md:w-1/2">
+      <img src="imagenes/image-2.jpg" alt="imagen2" class="w-full h-[300px] object-cover rounded-md">
     </div>
 
-    <div class="w-full mt-10 text-right px-16">
-        <p class="text-black">
-            Desenvolupat per 
-            <span class="text-[#e00069] font-semibold">GNA Hotel Solutions</span>
-        </p>
+    <!-- CONTENIDO -->
+    <div class="w-full md:w-1/2 text-center md:text-left">
+      <span class="bg-[#E00069] text-white rounded-full px-4 py-2 text-sm inline-block mb-4">
+        Tecnologia
+      </span>
+
+      <h3 class="text-3xl font-semibold mb-4">Lorem ipsum</h3>
+
+      <p class="text-gray-700 mb-6">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus, velit id viverra 
+        fermentum, mauris odio maximus augue, ac pretium diam nunc non.
+      </p>
+
+      <a href="#" class="text-[#E00069] underline font-semibold">
+        Més informació
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Segunda sección-->
+  <div class="flex flex-col md:flex-row gap-6 mt-10">
+
+    <!-- Contenido -->
+    <div class="w-full md:w-1/2">
+        <div class="flex justify-center space-x-4 mb-4 md:justify-start">
+            <span class="bg-[#E00069] text-white rounded-full px-4 py-2 text-sm inline-block mb-4">
+              Màrqueting
+            </span>
+            <span class="bg-[#E00069] text-white rounded-full px-4 py-2 text-sm inline-block mb-4">
+              Tecnologia
+            </span>
+
+        </div>
+
+      <h3 class="text-2xl font-semibold mb-4">Lorem ipsum</h3>
+
+      <p class="text-gray-700 mb-6">
+        Pellentesque hendrerit sit amet mauris vel dapibus. In felis diam,  ornare vel iaculis et, egestas 
+        sit amet dolor. Nulla nec cursus dui.  Nulla vulputate dolor et nunc feugiat tempus. Nullam bibendum 
+        et dolor  quis ornare. Nam ac ante ac felis molestie dictum et et risus. Quisque  sagittis dignissim 
+        accumsan. Aliquam mattis volutpat condimentum.  Interdum et malesuada fames ac ante ipsum primis in 
+        faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia  curae; 
+        Integer vel sem dolor. Fusce et massa feugiat, lacinia est sit  amet, consectetur orci.Pellentesque hendrerit sit 
+        amet mauris vel dapibus. In felis diam,  ornare vel iaculis et, egestas sit amet dolor. Nulla nec cursus dui. 
+         Nulla vulputate dolor et nunc feugiat tempus. Nullam bibendum et dolor  quis ornare. Nam ac ante ac felis 
+         molestie dictum et et risus. Quisque  sagittis dignissim accumsan. Aliquam mattis volutpat condimentum.  
+         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci 
+         luctus et ultrices posuere cubilia  
+        curae; Integer vel sem dolor. Fusce et massa feugiat, lacinia est sit  amet, consectetur orci.
+      </p>
+
+      <a href="#" class="text-[#E00069] underline font-semibold">
+        Més informació
+      </a>
+    </div>
+
+    <!-- Imagen -->
+    <div class="w-full md:w-1/3">
+      <img src="imagenes/image-1.jpg" alt="imagen1" class="w-full h-[300px] object-cover rounded-md">
+    </div>
+  </div>
+
+</section>
+
+
+    <footer class="w-full bg-[#F1D0D6] py-16">
+    <div class="max-w-7xl mx-auto px-10">
+        
+        <div class="flex flex-col md:flex-row justify-between items-start">
+
+            <!-- LOGO -->
+            <div class="mb-10 md:mb-0">
+                <img src="imagenes/logonavfooter.png" alt="logo" class="h-16">
+            </div>
+
+            <!-- avisos -->
+            <div class="flex flex-col md:flex-row text-left md:space-x-24 text-black">
+
+                <p class="leading-8">
+                    Contacte <br>
+                    Newsletter <br>
+                    Treballa amb nosaltres
+                </p>
+
+                <p class="leading-8 mt-10 md:mt-0">
+                    Política de cookies <br>
+                    Política de privacitat <br>
+                    Avís legal
+                </p>
+
+            </div>
+
+        </div>
+        <!-- Desenvolupat per GNA Hotel Solutions  -->
+        <div class="mt-20 text-center md:text-right">
+            <p class="text-black text-sm">
+                Desenvolupat per
+                <span class="text-[#e00069] font-semibold">GNA Hotel Solutions</span>
+            </p>
+        </div>
+
     </div>
 </footer>
-
 
     <script src="script.js"></script>
 

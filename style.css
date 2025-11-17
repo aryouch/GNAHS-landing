@@ -1,17 +1,52 @@
+/* Reset de márgenes y rellenos */
 body, html {
     margin: 0;
     padding: 0;
 }
 
+/* Fondo hero */
 .fondo {
     background-image: url('imagenes/girona.jpg');
 }
 
-.titulorelativo {
-    top: 90%;
-}
-
+/* Menú al hacer scroll */
 .scrolled {
     background-color: rgb(224, 0, 105) !important;
     transition: background-color 0.3s ease;
+}
+
+/* Estilo de los títulos */
+.section_h2 {
+    margin-top: 65px;
+}
+
+.section_h2 .section_h2_span {
+    display: block;
+    margin-top: 0.3em;
+}
+
+/* Márgenes para la sección de párrafos */
+.margendivp_p {
+    margin-top: 30px;
+}
+
+/* Márgenes para centrar el contenido */
+.margendivp {
+    margin: 0 130px;
+    margin-bottom: 1.5em;
+}
+
+/* Estilos del select */
+.select-custom {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 14 8' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M1 1l5.326 5.7a.909.909 0 0 0 1.348 0L13 1'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 18px;
+    padding-right: 3rem;
+    cursor: pointer;
+}
+
+.seccionfiltro_h2 {
+   font-weight: 490;
 }

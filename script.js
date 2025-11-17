@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
 
 function changeMenu(isScrolled) {
     if (isScrolled) {
-        logo.src = 'imagenes/logonavblaco.png'; 
+        logo.src = 'imagenes/logoenblanco.png'; 
     } else {
         logo.src = 'imagenes/logonav.png'; 
     }
