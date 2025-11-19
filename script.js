@@ -32,7 +32,7 @@ function scrollFiltro() {
 
     if (window.scrollY >= 1350) {
         seccionFiltro.classList.add('sticky', 'left-0', 'right-0', 'z-30', 'shadow-lg');
-        seccionFiltro.style.top = headerHeight + "px"; // 👈 evita que se monte encima del header
+        seccionFiltro.style.top = headerHeight + "px"; 
     } else {
         seccionFiltro.classList.remove('fixed', 'left-0', 'right-0', 'z-30', 'shadow-lg');
         seccionFiltro.style.top = "";
