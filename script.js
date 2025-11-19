@@ -52,7 +52,6 @@ filtrarSelect.addEventListener('change', (e) => {
     // Obtener la categoría seleccionada
 
     const categoria = e.target.value;
-    console.log("Has seleccionado la categoría: " + e.target.value);
 
     switch (categoria) {
         case 'tecnologia':
