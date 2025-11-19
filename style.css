@@ -50,3 +50,11 @@ body, html {
 .seccionfiltro_h2 {
    font-weight: 490;
 }
+#menu {
+    z-index: 50 !important;
+}
+
+.seccionfiltro {
+    z-index: 30;    
+}
+

@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GNAHotelSolutions</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,21 +15,59 @@
         <div class="absolute inset-0 bg-black/40"></div>
 
         <!-- Navegación -->
-        <header class="fixed top-0 left-0 w-full z-20 transition-all duration-300" id="menu">
-            <nav class="flex items-center justify-between p-6 px-12">
-                <img src="imagenes/logonav.png" alt="Logo" class="h-16" id="logo">
+<header class="fixed top-0 left-0 w-full z-20 transition-all duration-300" id="menu">
+    <nav class="bg-transparent px-4 lg:px-12 py-4">
+        <div class="flex flex-wrap justify-between items-center mx-auto -xl">
 
-                <ul class="flex space-x-8">
-                    <li><a href="#" class="text-white text-lg font-semibold">Hotel</a></li>
-                    <li><a href="#" class="text-white text-lg font-semibold">Ofertas</a></li>
+            <!-- LOGO -->
+            <a href="#" class="flex items-center">
+                <img src="imagenes/logonav.png" class="h-16" alt="Logo" id="logo" />
+            </a>
+
+            <!-- BOTONES (solo el menú hamburguesa en móvil) -->
+            <div class="flex items-center lg:hidden">
+                <button data-collapse-toggle="mobile-menu" type="button"
+                    class="inline-flex items-center p-2 text-sm text-white rounded-lg hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Abrir menú</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- MENÚ -->
+            <div class="hidden w-full lg:flex lg:w-auto" id="mobile-menu">
+                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-10 lg:mt-0 text-white">
+
                     <li>
-                        <a href="#" class="text-white text-lg font-semibold border border-white px-6 py-2 rounded-full">
+                        <a href="#" class="block py-2 pl-3 pr-4 text-lg font-semibold lg:p-0">
+                            Hotel
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="block py-2 pl-3 pr-4 text-lg font-semibold lg:p-0">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            class="block py-2 pl-3 pr-4 text-lg font-semibold border border-white px-6 py-2 rounded-full lg:p-0 lg:border lg:border-white lg:px-6 lg:py-2">
                             Reservar
                         </a>
                     </li>
+
                 </ul>
-            </nav>
-        </header>
+            </div>
+        </div>
+    </nav>
+</header>
+
+        
        <h1 class="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 
            text-white font-bold text-center 
            text-4xl md:text-6xl lg:text-7xl tracking-wide">
@@ -40,15 +76,17 @@
     </div>
 
 
-    <section class="max-w-full mx-auto">
+<section class="w-full max-w-1xl mx-auto px-15 py-15">
 
-        <h2 class="text-5xl font-normal text-center section_h2">
-            GNA Hotel Solutions:<br>
-            <span class="section_h2_span">l’èxit online del teu hotel</span>
-        </h2>
+    <!-- TÍTULO RESPONSIVE -->
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal text-center section_h2 leading-tight">
+        GNA Hotel Solutions:<br>
+        <span class="section_h2_span">l’èxit online del teu hotel</span>
+    </h2>
 
-        <div class="margendivp">
-            <p class="text-justify margendivp_p">
+    <!-- CONTENEDOR DEL TEXTO -->
+    <div class="mt-8">
+        <p class="text-justify text-base sm:text-lg leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam rhoncus,
             velit id viverra fermentum, mauris odio maximus augue, ac pretium diam nunc non lacus.
             Suspendisse mattis pellentesque velit, a vestibulum felis condimentum et. Aenean dapibus
@@ -58,8 +96,7 @@
             est tristique placerat. Suspendisse velit elit, commodo sit amet libero at, mollis placerat
             massa. Nunc elementum vulputate mauris vitae congue. Nunc vitae mi ligula. Etiam viverra
             viverra ante, vel dictum nisl condimentum vitae.
-            <br>
-            <br>
+            <br><br>
             Pellentesque hendrerit sit amet mauris vel dapibus. In felis diam, ornare vel iaculis et,
             egestas sit amet dolor. Nulla nec cursus dui. Nulla vulputate dolor et nunc feugiat tempus.
             Nullam bibendum et dolor quis ornare. Nam ac ante ac felis molestie dictum et et risus.
@@ -68,28 +105,29 @@
             orci luctus et ultrices posuere cubilia curae; Integer vel sem dolor. Fusce et massa feugiat,
             lacinia est sit amet, consectetur orci.
         </p>
-        </div>
-    </section>
+    </div>
+
+</section>
+
 
   <section class="max-w-full bg-[#F1D0D6] my-15 p-4 flex flex-col md:flex-row items-center md:space-x-8 seccionfiltro">
     <h2 class="font-normal text-lg seccionfiltro_h2 pl-4 md:pl-12 mb-4 md:mb-0">Filtrar per</h2> 
     <select class="select-custom border rounded-full p-4 w-full md:w-1/6 bg-white">
-        <option value="">Seleccionar</option>
-        <option value="opcion1">Opción 1</option>
-        <option value="opcion2">Opción 2</option>
-        <option value="opcion3">Opción 3</option>
+        <option value="" class="opciones">Seleccionar</option>
+        <option value="tecnologia" class="opciones">Tecnologia</option>
+        <option value="marqueting" class="opciones">Màrqueting</option>
     </select>
 </section>
 
 <section class="max-w-7xl mx-auto mb-32 px-4">
   <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
 
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 filtrotecnologia">
       <img src="imagenes/image-2.jpg" alt="imagen2" class="w-full h-[300px] object-cover rounded-md">
     </div>
 
     <!-- CONTENIDO -->
-    <div class="w-full md:w-1/2 text-center md:text-left">
+    <div class="w-full md:w-1/2 text-center md:text-left filtrotecnologia">
       <span class="bg-[#E00069] text-white rounded-full px-4 py-2 text-sm inline-block mb-4">
         Tecnologia
       </span>
@@ -112,7 +150,7 @@
   <div class="flex flex-col md:flex-row gap-6 mt-10">
 
     <!-- Contenido -->
-    <div class="w-full md:w-1/2">
+    <div class="w-full md:w-1/2 filtoremarqueting filtrotecnologia">
         <div class="flex justify-center space-x-4 mb-4 md:justify-start">
             <span class="bg-[#E00069] text-white rounded-full px-4 py-2 text-sm inline-block mb-4">
               Màrqueting
@@ -146,7 +184,7 @@
     </div>
 
     <!-- Imagen -->
-    <div class="w-full md:w-1/3">
+    <div class="w-full md:w-1/3 filtoremarqueting filtrotecnologia">
       <img src="imagenes/image-1.jpg" alt="imagen1" class="w-full h-[300px] object-cover rounded-md">
     </div>
   </div>
@@ -192,8 +230,8 @@
 
     </div>
 </footer>
-
-    <script src="script.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
