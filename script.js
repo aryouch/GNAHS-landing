@@ -68,22 +68,74 @@ filtrarSelect.addEventListener('change', (e) => {
 });
 
 function mostrarSolo(selector) {
-   
     // Ocultar todos los elementos primero
     filtros.forEach(el => {
         el.style.display = 'none';
 
+        // quitar animación a todos los spans dentro
+        el.querySelectorAll('span').forEach(s => s.classList.remove('animate-slide'));
+
+        // quitar animación al h3 solo si existe
+        const h3 = el.querySelector('h3');
+        if(h3) {
+            h3.classList.remove('animate-slide-left');
+        }
+        // quitar animación al p solo si existe
+        const p = el.querySelector('p');
+        if(p) {
+            p.classList.remove('animate-slide-right');
+        }
+        // quitar animación al a solo si existe
+        const a = el.querySelector('a');
+        if(a) {
+            a.classList.remove('animate-slide-left');
+        }
     });
+
     // Mostrar solo los elementos que coinciden con el selector
-    document.querySelectorAll(selector).forEach(el => {
+    const elementos = document.querySelectorAll(selector);
+    elementos.forEach(el => {
         el.style.display = 'block';
+
+        // Animar cada span dentro de este bloque
+        let spans = el.querySelectorAll('span');
+        let h3 = el.querySelector('h3');
+        let p = el.querySelector('p');
+        let a = el.querySelector('a');
+
+        spans.forEach(s => {
+            s.classList.remove('animate-slide'); // quitar clase
+            void s.offsetWidth;                 // forzar reflow
+            s.classList.add('animate-slide');   // agregar clase de animación
+        });
+
+        // Animar el h3 si existe
+        if(h3) {
+            void h3.offsetWidth;
+            h3.classList.add('animate-slide-left');
+        }
+        // Animar el p si existe
+        if(p) {
+            void p.offsetWidth;
+            p.classList.add('animate-slide-right');
+        }
+        // Animar el a si existe
+        if(a) {
+            a.classList.remove('animate-slide-left');
+            void a.offsetWidth;
+            a.classList.add('animate-slide-left');
+        }
     });
 }
 
+
+
 // Mostrar toido sin filtros
 function mostrarTodos() {
-    filtros.forEach(el=>{
-        el.style.display = 'block'; 
-
+    filtros.forEach(el => {
+        el.style.display = 'block';
+        el.classList.remove('animate-slide');
+        void el.offsetWidth; // void sirve para  forzar reflow // refloow es una recalculación del estilo y diseño de un elemento en la página web.
+        el.classList.add('animate-slide');
     });
 }

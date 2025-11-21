@@ -58,3 +58,48 @@ body, html {
     z-index: 30;    
 }
 
+
+.animate-slide-left {
+    animation: slidefromleft 0.5s ease forwards;
+}
+
+.animate-slide-right {
+    animation: slidefromright 0.5s ease forwards; 
+}
+
+.animate-slide {
+    animation: slidefrombottom 0.5s ease forwards; /* forwards para mantener el estado final */
+}
+
+@keyframes slidefromleft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidefromright {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slidefrombottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
